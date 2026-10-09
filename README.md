@@ -2,6 +2,9 @@
 
 Interfaz web local conectada al mismo despliegue usado en `ejm.ipynb`.
 
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/efebfc9f-0efa-4ac7-a6e3-1d605e417ef9" />
+
+
 ## Configuración
 
 1. Instala las dependencias:
