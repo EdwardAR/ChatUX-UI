@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Azure AI · Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="intro-panel">
+        <div class="brand"><span class="brand-mark">✦</span> Azure AI</div>
+        <div class="intro-copy">
+          <p class="eyebrow">CONVERSACIÓN PRIVADA</p>
+          <h1>Pregunta.<br /><em>Explora.</em><br />Construye.</h1>
+          <p class="lede">Un espacio limpio para consultar tu modelo desplegado en Azure OpenAI.</p>
+        </div>
+        <div class="status"><span class="status-dot"></span><span>Conectado al entorno local</span></div>
+      </aside>
+
+      <section class="chat-panel" aria-label="Chat con Azure OpenAI">
+        <header class="chat-header">
+          <div>
+            <p class="eyebrow">ASISTENTE</p>
+            <h2>Studio chat</h2>
+          </div>
+          <button class="clear-button" id="clear-button" type="button" title="Limpiar conversación">Limpiar</button>
+        </header>
+
+        <div class="messages" id="messages" aria-live="polite">
+          <article class="message assistant-message">
+            <div class="avatar">AI</div>
+            <div class="bubble"><p>Hola. Estoy listo para ayudarte. ¿Qué quieres consultar?</p></div>
+          </article>
+        </div>
+
+        <form class="composer" id="chat-form">
+          <label class="sr-only" for="message-input">Escribe tu mensaje</label>
+          <textarea id="message-input" rows="1" placeholder="Escribe una pregunta..." maxlength="4000" required></textarea>
+          <button class="send-button" id="send-button" type="submit" aria-label="Enviar mensaje" title="Enviar mensaje">
+            <span>Enviar</span><span class="send-icon">↗</span>
+          </button>
+        </form>
+        <p class="disclaimer">Las respuestas pueden contener errores. Verifica la información importante.</p>
+      </section>
+    </main>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
